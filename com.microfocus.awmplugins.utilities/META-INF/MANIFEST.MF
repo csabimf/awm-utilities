@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AWM Utilities
+Bundle-SymbolicName: com.microfocus.awmplugins.utilities;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Micro Focus
+Automatic-Module-Name: com.microfocus.awmplugins.utilities
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.core.runtime,
+ com.microfocus.awm;bundle-version="5.0.0"
+Bundle-ClassPath: lib/jsoup-1.12.1.jar,
+ .

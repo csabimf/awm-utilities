@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.microfocus.awmplugins.utilities.feature_1.0.0.qualifier.jar" id="com.microfocus.awmplugins.utilities.feature" version="1.0.0.qualifier">
+      <category name="com.microfocus.awmplugins.feature.category"/>
+   </feature>
+   <category-def name="com.microfocus.awmplugins.feature.category" label="Application Workflow Manager"/>
+</site>

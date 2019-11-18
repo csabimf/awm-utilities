@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.microfocus.awm.model.extension">
+      <functionPackage
+            deprecated="false"
+            id="com.microfocus.awmplugins.utilities.functionPackage"
+            label="Utilities">
+         <toolType
+               deprecated="false"
+               id="tool.base64Decoder"
+               label="Base64 Decode"
+               toolExecutor="com.microfocus.awmplugins.utilities.Base64DecoderExecutor">
+            <inputParameter
+                  cardinality="1..1"
+                  id="in.input"
+                  label="Input"
+                  massProcessing="true"
+                  type="STRING">
+            </inputParameter>
+            <outputParameter
+                  cardinality="1..1"
+                  id="out.output"
+                  label="Output"
+                  massProcessing="true"
+                  type="STRING">
+            </outputParameter>
+         </toolType>
+         <toolType
+               deprecated="false"
+               id="tool.base64Encoder"
+               label="Base64 Encode"
+               toolExecutor="com.microfocus.awmplugins.utilities.Base64EncoderExecutor">
+            <inputParameter
+                  cardinality="1..1"
+                  id="in.input"
+                  label="Input"
+                  massProcessing="true"
+                  type="STRING">
+            </inputParameter>
+            <outputParameter
+                  cardinality="1..1"
+                  id="out.output"
+                  label="Output"
+                  massProcessing="true"
+                  type="STRING">
+            </outputParameter>
+         </toolType>
+         <toolType
+               deprecated="false"
+               id="tool.dateReformatter"
+               label="Reformat Date"
+               toolExecutor="com.microfocus.awmplugins.utilities.DateReformatterExecutor">
+            <inputParameter
+                  cardinality="1..1"
+                  id="in.input"
+                  label="Input"
+                  massProcessing="true"
+                  type="STRING">
+            </inputParameter>
+            <outputParameter
+                  cardinality="1..1"
+                  id="out.output"
+                  label="Output"
+                  massProcessing="true"
+                  type="STRING">
+            </outputParameter>
+            <attribute
+                  category="Dynamic"
+                  id="attr.inputFormat"
+                  label="Input Format"
+                  mandatory="true"
+                  modelLabel="true"
+                  multiLine="false"
+                  type="String">
+            </attribute>
+            <attribute
+                  category="Dynamic"
+                  id="attr.outputFormat"
+                  label="Output Format"
+                  mandatory="true"
+                  modelLabel="true"
+                  multiLine="false"
+                  type="String">
+            </attribute>
+         </toolType>
+         <toolType
+               deprecated="false"
+               id="tool.tagStripper"
+               label="Strip Tags"
+               toolExecutor="com.microfocus.awmplugins.utilities.TagStripperExecutor">
+            <inputParameter
+                  cardinality="1..1"
+                  id="in.input"
+                  label="Input"
+                  massProcessing="true"
+                  type="STRING">
+            </inputParameter>
+            <outputParameter
+                  cardinality="1..1"
+                  id="out.output"
+                  label="Output"
+                  massProcessing="true"
+                  type="STRING">
+            </outputParameter>
+         </toolType>
+      </functionPackage>
+   </extension>
+
+</plugin>
