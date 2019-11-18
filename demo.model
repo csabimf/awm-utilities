@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taurus:TaurusConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dynamicAWM="http:///com.microfocus.awm.dynamic.ecore" xmlns:taurus="http://www.microfocus.com/AWM">
+  <Application_Options LastEditClientVersion="5.0.0.v201906071739" IndependentAffectedResourceContexts="false">
+    <Application_Action Label="" taurus:SeqNo="1">
+      <TargetID>#DEMO_ACT_Demo_Base64_Encode</TargetID>
+    </Application_Action>
+    <Application_Action Label="" taurus:SeqNo="2">
+      <TargetID>#DEMO_ACT_Demo_Base64_Decode</TargetID>
+    </Application_Action>
+    <Application_Action Label="" taurus:SeqNo="3">
+      <TargetID>#DEMO_ACT_Demo_Reformat_Date</TargetID>
+    </Application_Action>
+    <Application_Action taurus:SeqNo="4">
+      <TargetID>#DEMO_ACT_Demo_Strip_Tags</TargetID>
+    </Application_Action>
+  </Application_Options>
+  <FunctionPackages>
+    <FunctionPackage xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm" taurus:ID="com.microfocus.awm.functionpackage.awm" taurus:Label="AWM"/>
+    <FunctionPackage xsi:type="dynamicAWM:com.microfocus.awmplugins.utilities.functionPackage" taurus:ID="com.microfocus.awmplugins.utilities.functionPackage" taurus:Label="Utilities"/>
+  </FunctionPackages>
+  <ID_Definitions/>
+  <ActionDescriptors>
+    <ActionDescriptor taurus:ID="DEMO_ACT_Demo_Base64_Decode" taurus:Label="Demo \ Base64 Decode">
+      <Has_Tool taurus:SeqNo="1">
+        <TargetID>#DEMO_TOOL_AWM_Dialog_Base64_Decode_Input</TargetID>
+      </Has_Tool>
+      <Has_Tool taurus:SeqNo="2">
+        <TargetID>#DEMO_TOOL_AWMUTIL_Base64_Decode</TargetID>
+      </Has_Tool>
+      <Has_Tool taurus:SeqNo="3">
+        <TargetID>#DEMO_TOOL_AWM_Dialog_Base64_Decode_Output</TargetID>
+      </Has_Tool>
+    </ActionDescriptor>
+    <ActionDescriptor taurus:ID="DEMO_ACT_Demo_Base64_Encode" taurus:Label="Demo \ Base64 Encode">
+      <Has_Tool taurus:SeqNo="1">
+        <TargetID>#DEMO_TOOL_AWM_Dialog_Base64_Encode_Input</TargetID>
+      </Has_Tool>
+      <Has_Tool taurus:SeqNo="2">
+        <TargetID>#DEMO_TOOL_AWMUTIL_Base64_Encode</TargetID>
+      </Has_Tool>
+      <Has_Tool taurus:SeqNo="3">
+        <TargetID>#DEMO_TOOL_AWM_Dialog_Base64_Encode_Output</TargetID>
+      </Has_Tool>
+    </ActionDescriptor>
+    <ActionDescriptor taurus:ID="DEMO_ACT_Demo_Reformat_Date" taurus:Label="Demo \ Reformat Date">
+      <Has_Tool taurus:SeqNo="1">
+        <TargetID>#DEMO_TOOL_AWM_Dialog_Reformat_Date_Input</TargetID>
+      </Has_Tool>
+      <Has_Tool taurus:SeqNo="2">
+        <TargetID>#DEMO_TOOL_AWMUTIL_Reformat_Date</TargetID>
+      </Has_Tool>
+      <Has_Tool taurus:SeqNo="3">
+        <TargetID>#DEMO_TOOL_AWM_Dialog_Reformat_Date_Output</TargetID>
+      </Has_Tool>
+    </ActionDescriptor>
+    <ActionDescriptor taurus:ID="DEMO_ACT_Demo_Strip_Tags" taurus:Label="Demo \ Strip Tags">
+      <Has_Tool taurus:SeqNo="1">
+        <TargetID>#DEMO_TOOL_AWM_Dialog_Strip_Tags_Input</TargetID>
+      </Has_Tool>
+      <Has_Tool taurus:SeqNo="2">
+        <TargetID>#DEMO_TOOL_AWMUTIL_Strip_Tags</TargetID>
+      </Has_Tool>
+      <Has_Tool taurus:SeqNo="3">
+        <TargetID>#DEMO_TOOL_AWM_Dialog_Strip_Tags_Output</TargetID>
+      </Has_Tool>
+    </ActionDescriptor>
+  </ActionDescriptors>
+  <GlobalActions/>
+  <ElementTypes/>
+  <ElementListStructures/>
+  <FileDescriptors/>
+  <FilterTypes/>
+  <Properties>
+    <Property taurus:ID="DEMO_PROP_Input"/>
+    <Property taurus:ID="DEMO_PROP_Output"/>
+    <Property taurus:ID="DEMO_PROP_Big_Input" Max_lines="10" taurus:Type="TextArea"/>
+    <Property taurus:ID="DEMO_PROP_Big_Output" Max_lines="10" taurus:Type="TextArea"/>
+  </Properties>
+  <ToolDescriptors>
+    <ToolDescriptor xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2" taurus:ID="DEMO_TOOL_AWM_Dialog_Base64_Decode_Input" ToolType="com.microfocus.awm.functionpackage.awm.modelDialog2" com.microfocus.awm.functionpackage.awm.modelDialog2.title="Base64 Decode">
+      <InputParm xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" ExtensionID="com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" taurus:SeqNo="1" Type="String" taurus:Label="Base64 Text" Parameter_from="User_Input">
+        <TargetID_Parm>#DEMO_PROP_Input</TargetID_Parm>
+      </InputParm>
+    </ToolDescriptor>
+    <ToolDescriptor xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2" taurus:ID="DEMO_TOOL_AWM_Dialog_Base64_Decode_Output" ToolType="com.microfocus.awm.functionpackage.awm.modelDialog2" com.microfocus.awm.functionpackage.awm.modelDialog2.title="Base64 Decode">
+      <InputParm xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" ExtensionID="com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" taurus:SeqNo="1" Type="String" taurus:Label="Text" Parameter_from="Previous_Tool" com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field.attr.mandatory="false">
+        <TargetID_Parm>#DEMO_PROP_Output</TargetID_Parm>
+      </InputParm>
+    </ToolDescriptor>
+    <ToolDescriptor xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2" taurus:ID="DEMO_TOOL_AWM_Dialog_Base64_Encode_Input" ToolType="com.microfocus.awm.functionpackage.awm.modelDialog2" com.microfocus.awm.functionpackage.awm.modelDialog2.title="Base64 Encode">
+      <InputParm xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" ExtensionID="com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" taurus:SeqNo="1" Type="String" taurus:Label="Text" Parameter_from="User_Input">
+        <TargetID_Parm>#DEMO_PROP_Input</TargetID_Parm>
+      </InputParm>
+    </ToolDescriptor>
+    <ToolDescriptor xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2" taurus:ID="DEMO_TOOL_AWM_Dialog_Base64_Encode_Output" ToolType="com.microfocus.awm.functionpackage.awm.modelDialog2" com.microfocus.awm.functionpackage.awm.modelDialog2.title="Base64 Encode">
+      <InputParm xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" ExtensionID="com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" taurus:SeqNo="1" Type="String" taurus:Label="Base64 Text" Parameter_from="Previous_Tool" com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field.attr.mandatory="false">
+        <TargetID_Parm>#DEMO_PROP_Output</TargetID_Parm>
+      </InputParm>
+    </ToolDescriptor>
+    <ToolDescriptor xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2" taurus:ID="DEMO_TOOL_AWM_Dialog_Reformat_Date_Input" ToolType="com.microfocus.awm.functionpackage.awm.modelDialog2" com.microfocus.awm.functionpackage.awm.modelDialog2.title="Reformat Date">
+      <InputParm xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" ExtensionID="com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" taurus:SeqNo="1" Type="String" taurus:Label="Input (yyyy-MM-dd)" Parameter_from="User_Input">
+        <TargetID_Parm>#DEMO_PROP_Input</TargetID_Parm>
+      </InputParm>
+    </ToolDescriptor>
+    <ToolDescriptor xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2" taurus:ID="DEMO_TOOL_AWM_Dialog_Reformat_Date_Output" ToolType="com.microfocus.awm.functionpackage.awm.modelDialog2" com.microfocus.awm.functionpackage.awm.modelDialog2.title="Reformat Date">
+      <InputParm xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" ExtensionID="com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" taurus:SeqNo="1" Type="String" taurus:Label="Output (MM/dd/yyyy)" Parameter_from="Previous_Tool" com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field.attr.editable="false">
+        <TargetID_Parm>#DEMO_PROP_Output</TargetID_Parm>
+      </InputParm>
+    </ToolDescriptor>
+    <ToolDescriptor xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2" taurus:ID="DEMO_TOOL_AWM_Dialog_Strip_Tags_Input" ToolType="com.microfocus.awm.functionpackage.awm.modelDialog2" com.microfocus.awm.functionpackage.awm.modelDialog2.title="Strip Tags">
+      <InputParm xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" ExtensionID="com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" taurus:SeqNo="1" Type="String" taurus:Label="HTML" Parameter_from="User_Input">
+        <TargetID_Parm>#DEMO_PROP_Big_Input</TargetID_Parm>
+      </InputParm>
+    </ToolDescriptor>
+    <ToolDescriptor xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2" taurus:ID="DEMO_TOOL_AWM_Dialog_Strip_Tags_Output" ToolType="com.microfocus.awm.functionpackage.awm.modelDialog2" com.microfocus.awm.functionpackage.awm.modelDialog2.title="Strip Tags">
+      <InputParm xsi:type="dynamicAWM:com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" ExtensionID="com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field" taurus:SeqNo="1" Type="String" taurus:Label="Text" Parameter_from="Previous_Tool" com.microfocus.awm.functionpackage.awm.modelDialog2.inparm.dialog.field.attr.editable="false">
+        <TargetID_Parm>#DEMO_PROP_Big_Output</TargetID_Parm>
+      </InputParm>
+    </ToolDescriptor>
+    <ToolDescriptor xsi:type="dynamicAWM:com.microfocus.awmplugins.utilities.functionPackage.tool.base64Decoder" taurus:ID="DEMO_TOOL_AWMUTIL_Base64_Decode" ToolType="com.microfocus.awmplugins.utilities.functionPackage.tool.base64Decoder">
+      <InputParm xsi:type="dynamicAWM:com.microfocus.awmplugins.utilities.functionPackage.tool.base64Decoder.in.input" ExtensionID="com.microfocus.awmplugins.utilities.functionPackage.tool.base64Decoder.in.input" taurus:SeqNo="1" Type="String" taurus:Label="Input" taurus:MassProcessing="true" Parameter_from="Previous_Tool">
+        <TargetID_Parm>#DEMO_PROP_Input</TargetID_Parm>
+      </InputParm>
+      <OutputParm xsi:type="dynamicAWM:com.microfocus.awmplugins.utilities.functionPackage.tool.base64Decoder.out.output" ExtensionID="com.microfocus.awmplugins.utilities.functionPackage.tool.base64Decoder.out.output" taurus:SeqNo="1" Type="String" taurus:Label="Output" taurus:MassProcessing="true">
+        <TargetID_Parm>#DEMO_PROP_Output</TargetID_Parm>
+      </OutputParm>
+    </ToolDescriptor>
+    <ToolDescriptor xsi:type="dynamicAWM:com.microfocus.awmplugins.utilities.functionPackage.tool.base64Encoder" taurus:ID="DEMO_TOOL_AWMUTIL_Base64_Encode" ToolType="com.microfocus.awmplugins.utilities.functionPackage.tool.base64Encoder">
+      <InputParm xsi:type="dynamicAWM:com.microfocus.awmplugins.utilities.functionPackage.tool.base64Encoder.in.input" ExtensionID="com.microfocus.awmplugins.utilities.functionPackage.tool.base64Encoder.in.input" taurus:SeqNo="1" Type="String" taurus:Label="Input" taurus:MassProcessing="true" Parameter_from="Previous_Tool">
+        <TargetID_Parm>#DEMO_PROP_Input</TargetID_Parm>
+      </InputParm>
+      <OutputParm xsi:type="dynamicAWM:com.microfocus.awmplugins.utilities.functionPackage.tool.base64Encoder.out.output" ExtensionID="com.microfocus.awmplugins.utilities.functionPackage.tool.base64Encoder.out.output" taurus:SeqNo="1" Type="String" taurus:Label="Output" taurus:MassProcessing="true">
+        <TargetID_Parm>#DEMO_PROP_Output</TargetID_Parm>
+      </OutputParm>
+    </ToolDescriptor>
+    <ToolDescriptor xsi:type="dynamicAWM:com.microfocus.awmplugins.utilities.functionPackage.tool.dateReformatter" taurus:ID="DEMO_TOOL_AWMUTIL_Reformat_Date" ToolType="com.microfocus.awmplugins.utilities.functionPackage.tool.dateReformatter" com.microfocus.awmplugins.utilities.functionPackage.tool.dateReformatter.attr.inputFormat="yyyy-MM-dd" com.microfocus.awmplugins.utilities.functionPackage.tool.dateReformatter.attr.outputFormat="MM/dd/yyyy">
+      <InputParm xsi:type="dynamicAWM:com.microfocus.awmplugins.utilities.functionPackage.tool.dateReformatter.in.input" ExtensionID="com.microfocus.awmplugins.utilities.functionPackage.tool.dateReformatter.in.input" taurus:SeqNo="1" Type="String" taurus:Label="Input" taurus:MassProcessing="true" Parameter_from="Previous_Tool">
+        <TargetID_Parm>#DEMO_PROP_Input</TargetID_Parm>
+      </InputParm>
+      <OutputParm xsi:type="dynamicAWM:com.microfocus.awmplugins.utilities.functionPackage.tool.dateReformatter.out.output" ExtensionID="com.microfocus.awmplugins.utilities.functionPackage.tool.dateReformatter.out.output" taurus:SeqNo="1" Type="String" taurus:Label="Output" taurus:MassProcessing="true">
+        <TargetID_Parm>#DEMO_PROP_Output</TargetID_Parm>
+      </OutputParm>
+    </ToolDescriptor>
+    <ToolDescriptor xsi:type="dynamicAWM:com.microfocus.awmplugins.utilities.functionPackage.tool.tagStripper" taurus:ID="DEMO_TOOL_AWMUTIL_Strip_Tags" ToolType="com.microfocus.awmplugins.utilities.functionPackage.tool.tagStripper">
+      <InputParm xsi:type="dynamicAWM:com.microfocus.awmplugins.utilities.functionPackage.tool.tagStripper.in.input" ExtensionID="com.microfocus.awmplugins.utilities.functionPackage.tool.tagStripper.in.input" taurus:SeqNo="1" Type="String" taurus:Label="Input" taurus:MassProcessing="true" Parameter_from="Previous_Tool">
+        <TargetID_Parm>#DEMO_PROP_Big_Input</TargetID_Parm>
+      </InputParm>
+      <OutputParm xsi:type="dynamicAWM:com.microfocus.awmplugins.utilities.functionPackage.tool.tagStripper.out.output" ExtensionID="com.microfocus.awmplugins.utilities.functionPackage.tool.tagStripper.out.output" taurus:SeqNo="1" Type="String" taurus:Label="Output" taurus:MassProcessing="true">
+        <TargetID_Parm>#DEMO_PROP_Big_Output</TargetID_Parm>
+      </OutputParm>
+    </ToolDescriptor>
+  </ToolDescriptors>
+  <Icons/>
+</taurus:TaurusConfiguration>
